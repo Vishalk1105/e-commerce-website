@@ -1,0 +1,29 @@
+.productListDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+/* Product List Filter CSS */
+.cart span {
+  font-size: 12px;
+}
+
+/* product Carousel css */
+
+.productCarousel {
+  width: 500px;
+  /* max-width: 300px; */
+  display: block;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .productListMainDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .productListDiv {
+    justify-content: center;
+  }
+}

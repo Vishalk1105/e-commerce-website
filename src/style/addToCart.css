@@ -1,0 +1,7 @@
+.addToCart .dropdown-toggle::after {
+  display: none !important;
+}
+.modal-ku {
+  width: 750px;
+  margin: auto;
+}
