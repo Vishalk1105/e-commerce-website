@@ -24,15 +24,18 @@ const LogIn = () => {
     });
     if (userName.length === 0 || password.length === 0) {
       setEmptyFieldErrorMsg(true);
+      navigate("/login");
+    } else {
+      const resp = await data.json();
+      localStorage.setItem("token", resp.token);
+      setPassWord("");
+      setUserName("");
+      navigate("/");
     }
     if (data.status === 400) {
       setInvalidFieldErrorError(true);
+      navigate("/login");
     }
-    const resp = await data.json();
-    localStorage.setItem("token", resp.token);
-    setPassWord("");
-    setUserName("");
-    navigate("/");
   };
   const onIconClick = () => {
     setShowPassword(!showPassword);
