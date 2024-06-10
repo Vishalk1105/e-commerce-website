@@ -8,15 +8,13 @@ import MyProfile from "./app/view/MyProfile";
 import ProductDetails from "./app/view/Products/ProductDetails";
 import CategoriesProductsPage from "./app/view/Categories/CategoriesProductsPage";
 import PrivateRoute from "./routes/PrivateRoute";
-import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route element={<ProtectedRoute />}>
-          <Route path="/login" element={<LogIn />} />
-        </Route>
+        <Route path="/login" element={<LogIn />} />
+
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductList />} />

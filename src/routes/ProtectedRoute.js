@@ -5,7 +5,7 @@ const ProtectedRoute = () => {
   const token = localStorage.getItem("token");
   const data = token !== null && jwt_decode(token);
 
-  return data ? <Navigate to="/" replace /> : <Outlet />;
+  return data ? <Navigate to="/" /> : <Outlet />;
 };
 
 export default ProtectedRoute;

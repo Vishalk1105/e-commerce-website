@@ -5,7 +5,7 @@ const Home = () => {
   console.log("Home Page");
   return (
     <MainLayout>
-      <h1>Peracto Infotech Assignment</h1>
+      <h1>E-Commerce Website</h1>
     </MainLayout>
   );
 };

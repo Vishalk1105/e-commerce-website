@@ -31,11 +31,11 @@ const Categories = () => {
           </thead>
           <tbody>
             {categoryData.map((ele, i) => (
-              <tr key={ele}>
+              <tr key={i}>
                 <th>{i + 1}</th>
-                <td>{ele}</td>
+                <td>{ele.name}</td>
                 <td>
-                  <Link to={`/products/category/${ele}`}>
+                  <Link to={`/products/category/${ele.slug}`}>
                     <ReactButton
                       btnClass={"btn btn-danger"}
                       btnText={"View"}
